@@ -9,10 +9,11 @@ This server is meant to run in conjunction with a UDP server. It's purpose is to
 Setup
 --------------
   
--Clone this repository
--Configure the listener port and the UDP host and port in the config.js file
--Start the server: nohup node index.js > httpToUdp.log &
+- Clone this repository
+- Configure the listener port and the UDP host and port in the config.js file
+- Start the server: nohup node index.js > httpToUdp.log &
 
 Logging
 -------------
+
 The log will be available at httpToUdp.log
