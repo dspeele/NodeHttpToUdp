@@ -8,11 +8,8 @@ function start (route) {
         response.write('Message Received: ' + request.url);
         response.end();
         var url_parts = url.parse(request.url, true)
-        console.log('Url parts: %j ', url_parts);
         var message = url_parts.query.message;
-        console.log('Message to send is ' + message + '.');
         var pathname = url_parts.pathname;
-        console.log('Request for ' + pathname + '.');
         route(url_parts);
     }
 
