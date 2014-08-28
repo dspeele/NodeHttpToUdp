@@ -3,10 +3,10 @@ var config = require('./config');
 var server = config.udp.servername;
 var port = config.udp.port;
 
-function route(url_parts) {
-    switch(url_parts.pathname) {
+function route(pathname, message) {
+    switch(pathname) {
         case '/sendUdpMessage':
-            sendUdpMessage(url_parts.query.message);
+            sendUdpMessage(message);
             break;       
     }
 }

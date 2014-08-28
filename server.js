@@ -4,13 +4,18 @@ var config = require('./config');
 
 function start (route) {
     function onRequest (request, response) {
+        var url_parts = url.parse(request.url)
+        var message = '';
+        var pathname = url_parts.pathname;
+        request.on('data', function (data) {
+            message += data;
+        });
+        request.on('end', function () {
+	    route(pathname, message);    
+        });
         response.writeHead(200, {'Content-Type': 'text/plain'});
         response.write('Message Received: ' + request.url);
         response.end();
-        var url_parts = url.parse(request.url, true)
-        var message = url_parts.query.message;
-        var pathname = url_parts.pathname;
-        route(url_parts);
     }
 
     http.createServer(onRequest).listen(config.http.port);
