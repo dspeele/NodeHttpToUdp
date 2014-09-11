@@ -1,8 +1,0 @@
-Server has started.
-Url parts: {"protocol":null,"slashes":null,"auth":null,"host":null,"port":null,"hostname":null,"hash":null,"search":"?message=foo2:1.25|c","query":{"message":"foo2:1.25|c"},"pathname":"/sendUdpMessage","path":"/sendUdpMessage?message=foo2:1.25|c","href":"/sendUdpMessage?message=foo2:1.25|c"} 
-Message to send is foo2:1.25|c.
-Request for /sendUdpMessage.
-Sending foo2:1.25|c to localhost:8125
-Url parts: {"protocol":null,"slashes":null,"auth":null,"host":null,"port":null,"hostname":null,"hash":null,"search":"","query":{},"pathname":"/favicon.ico","path":"/favicon.ico","href":"/favicon.ico"} 
-Message to send is undefined.
-Request for /favicon.ico.

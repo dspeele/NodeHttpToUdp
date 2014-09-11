@@ -1,0 +1,27 @@
+{
+  "name": "NodeHttpToUdp",
+  "version": "0.1.0",
+  "description": "A simple Node server that listens for HTTP requests and sends them to another server via UDP",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha",
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/saksdirect/NodeHttpToUdp.git"
+  },
+  "author": "dana_peele@s5a.com",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/saksdirect/NodeHttpToUdp/issues"
+  },
+  "homepage": "https://github.com/saksdirect/NodeHttpToUdp",
+  "dependencies": {
+    "async": "^0.9.0"
+  },
+  "devDependencies": {
+    "mocha": "^1.21.4",
+    "supertest": "^0.13.0"
+  }
+}
