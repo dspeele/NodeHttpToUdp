@@ -7,12 +7,16 @@ function start (route) {
         var url_parts = url.parse(request.url)
         var message = '';
         var pathname = url_parts.pathname;
-        request.on('data', function (data) {
-            message += data;
-        });
-        request.on('end', function () {
-	    route(pathname, message);    
-        });
+        if (request.method == "POST") {	
+            request.on('data', function (data) {
+                message += data;
+            });
+            request.on('end', function () {
+	        if (message && message.length > 0 ) {	
+	            route(pathname, message);    
+	        }
+            });
+	}
         response.writeHead(200, {'Content-Type': 'text/plain'});
         response.write('Message Received: ' + request.url);
         response.end();
